@@ -71,3 +71,30 @@ class SavingsAccount(Account):
     def reset_withdraw_count(self):
         self.withdraw_count = 0
         print("Withdrawal count reset for this month.")
+
+        class BankAccount:
+    def __init__(self, account_number, account_balance=0):
+        self.account_number = account_number
+        self.account_balance = account_balance
+
+    def deposit(self, amount):
+        self.account_balance += amount
+        return f"${amount} deposited successfully!"
+
+    def withdraw(self, amount):
+        if self.account_balance < amount:
+            return "Insufficient funds!"
+        else:
+            self.account_balance -= amount
+            return f"${amount} withdrawn successfully!"
+
+class SavingsAccount(BankAccount):
+    def __init__(self, account_number, account_balance=0, interest_rate=0.01):
+        super().__init__(account_number, account_balance)
+        self.interest_rate = interest_rate
+
+    def add_interest(self):
+        interest = self.account_balance * self.interest_rate
+        self.account_balance += interest
+        return f"${interest:.2f} interest added successfully!"
+##
