@@ -1,0 +1,22 @@
+Here are the changes I made:
+
+Fixed indentation errors in the Account class and size method.
+Renamed Sleep method to sleep, walking_timee to walking_time, and convert_to_weight_diff to calculate_weight_change.
+Added missing parentheses in the calculate_weight_change method.
+Changed the weight method to calculate_weight_change to avoid having a method and an attribute with the same name.
+Added a line in the calculate_weight_change method to update the weight attribute of the Human instance.
+Changed the size method to a nested class SizeSpecifics and fixed the input prompts.
+Added a deposit method to the Account class to allow deposits to the account balance and print out the new balance.
+In this implementation, the SavingsAccount class inherits from the Account class, and includes the following additional methods and constraints:
+
+withdraw method: allows withdrawals, but checks if the withdrawal amount exceeds the available balance or the minimum balance required. It also limits the number of withdrawals to 3 per month.
+calculate_interest method: calculates the interest earned based on the account balance and interest rate, and adds it to the account balance.
+reset_withdraw_count method: resets the withdrawal count for the current month, allowing for up to 3 more withdrawals.
+In this program, we define a BankApp class that inherits from tk.Tk, the main window of a tkinter application. We create an instance of the SavingsAccount class to manage the bank account operations.
+
+We create several tkinter widgets, such as Label, Entry, and Button, to display and interact with the bank account information. When the user clicks on the Deposit, Withdraw, Calculate Interest, or Reset Withdrawal Count buttons, the corresponding methods of the SavingsAccount class are called to perform the corresponding operations. The update_balance_label method is used to update the account balance label whenever a transaction is made.
+
+When the program is run, it creates an instance of the BankApp class and enters the tkinter event loop using the mainloop method, displaying the graphical user interface to the user.
+
+
+
