@@ -69,3 +69,4 @@ class InterestAccount(BankAccount):
         interest = self.account_balance * self.interest_rate
         self.account_balance += interest
         return f"${interest:.2f} interest added successfully!"
+##

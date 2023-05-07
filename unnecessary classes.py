@@ -28,3 +28,4 @@ class Human:
             length = float(input("Enter specific height: "))
             weight = float(input("Enter specific weight: "))
             shoe_size = float(input("Enter specific shoe size: "))
+##
