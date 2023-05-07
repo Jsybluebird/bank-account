@@ -6,12 +6,16 @@ from bank_account import SavingsAccount
 savings_account = SavingsAccount()
 
 # Function to deposit money
+
+
 def deposit_money():
     amount = float(deposit_entry.get())
     savings_account.deposit(amount)
     messagebox.showinfo("Success", f"Deposit of ${amount} was successful!")
 
 # Function to withdraw money
+
+
 def withdraw_money():
     amount = float(withdraw_entry.get())
     result = savings_account.withdraw(amount)
@@ -21,6 +25,8 @@ def withdraw_money():
         messagebox.showerror("Error", result)
 
 # Create the GUI window
+
+
 root = Tk()
 root.title("Savings Account")
 root.geometry("400x300")
@@ -51,4 +57,3 @@ withdraw_button.pack(pady=10)
 
 # Start the GUI loop
 root.mainloop()
-##
